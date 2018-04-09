@@ -26,6 +26,10 @@ export class MyApp {
     });
   }
 
+  /**
+   * @param {any} page
+   * @memberof MyApp
+   */
   switchToPage(page: any) {
     this.navCtrl.push(page);
   }
