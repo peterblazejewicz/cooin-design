@@ -1,7 +1,42 @@
-<ion-menu [content]="content">
+<ion-nav #navCtrl [root]="rootPage"></ion-nav>
+<ion-menu [content]="navCtrl" no-border>
   <ion-header no-border>
+    <ion-navbar>
+      <img alt="Cooin" width="32" height="32" src="assets/icon/app-logo.svg">
+      <ion-avatar width="70" height="70">
+        <img src="assets/imgs/avatar.jpg">
+      </ion-avatar>
+      <h1 ion-text>Oykun Yilmaz</h1>
+    </ion-navbar>
   </ion-header>
-  <ion-content no-border>
+  <ion-content no-border padding>
+    <ion-grid justify-content-between full-height no-padding>
+      <ion-row>
+        <ion-list no-lines>
+          <button ion-item icon-only detail-none menuClose (tap)="switchToPage('CryptosPage')">
+            <ion-icon name='cooin-crypto' item-start></ion-icon>
+            Cryptos
+          </button>
+          <button ion-item icon-only detail-none menuClose (tap)="switchToPage('WalletsPage')">
+            <ion-icon name='cooin-wallet' item-start></ion-icon>
+            Wallets
+          </button>
+          <button ion-item icon-only detail-none menuClose (tap)="switchToPage('SendPage')">
+            <ion-icon name='cooin-upload-circle' item-start></ion-icon>
+            Transfer
+          </button>
+        </ion-list>
+      </ion-row>
+      <ion-row>
+        <ion-list no-lines>
+          <button ion-item text-only detail-none menuClose (tap)="switchToPage('SettingsPage')">
+            Settings
+          </button>
+          <button ion-item text-only detail-none menuClose (tap)="switchToPage('LogOutPage')">
+            Log Out
+          </button>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
   </ion-content>
 </ion-menu>
-<ion-nav #content [root]="rootPage"></ion-nav>

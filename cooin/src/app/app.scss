@@ -29,4 +29,44 @@ ion-icon {
     mask-image: url(../assets/icon/burger.svg);
   }
 
+  &[class*="cooin-crypto"] {
+    mask-image: url(../assets/icon/crypto.svg);
+  }
+
+  &[class*="cooin-upload-circle"] {
+    mask-image: url(../assets/icon/upload-circle.svg);
+  }
+
+  &[class*="cooin-wallet"] {
+    mask-image: url(../assets/icon/wallet.svg);
+  }
+
+}
+
+ion-grid {
+  &[justify-content-between] {
+    justify-content: space-between;
+  }
+  &[full-height] {
+    height: 100%;
+  }
+}
+
+ion-menu ion-header {
+  padding: 1.6rem 0 1.6rem 3rem;
+}
+ion-menu ion-header ion-avatar {
+  margin-top: 65px;
+  margin-bottom: 2px;
+}
+ion-menu ion-header h1 {
+  font-size: 2rem;
+}
+
+ion-menu .list:only-child {
+  margin-bottom: 0;
+}
+ion-menu .item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
